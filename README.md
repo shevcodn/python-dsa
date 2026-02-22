@@ -12,18 +12,19 @@
 ## Progress
 
 ```
-[████████░░░░░░░░░░░░] 333 / 1000 tasks complete
+[████████░░░░░░░░░░░░] 334 / 1000 tasks complete
 ```
 
 | Phase | Topics | Tasks | Status |
 |-------|--------|-------|--------|
-| 01 Basics | Variables, strings, lists, functions, OOP | p1–p150 | ✅ Done |
-| 02 OOP | Classes, inheritance, magic methods | p151–p200 | ✅ Done |
-| 03 Patterns | Design patterns, SOLID, architecture | p201–p250 | ✅ Done |
-| 04 Data Structures | Arrays, LinkedList, Trees, Graphs, HashMap | p251–p400 | 🔄 In progress |
-| 05 Algorithms | Sorting, Binary Search, DFS/BFS, DP | p401–p550 | ⏳ Upcoming |
-| 06 LeetCode | Easy + Medium problems | p551–p900 | ⏳ Upcoming |
-| 07 Backend | FastAPI, PostgreSQL, Docker, CI/CD | p901–p1000 | ⏳ Upcoming |
+| 01 Basics | Variables, strings, lists, loops | p1–p50 | ✅ Done |
+| 02 Functions | Functions, conditions, comprehensions | p51–p100 | ✅ Done |
+| 03 OOP | Classes, inheritance, magic methods | p101–p150 | ✅ Done |
+| 04 Patterns | Design patterns, SOLID, architecture | p151–p250 | ✅ Done |
+| 05 Data Structures | Arrays, LinkedList, Trees, Graphs, HashMap | p251–p400 | 🔄 In progress |
+| 06 Algorithms | Sorting, Binary Search, DFS/BFS, DP | p401–p550 | ⏳ Upcoming |
+| 07 LeetCode | Easy + Medium problems | p551–p900 | ⏳ Upcoming |
+| 08 Backend | FastAPI, PostgreSQL, Docker, CI/CD | p901–p1000 | ⏳ Upcoming |
 
 ---
 
@@ -31,13 +32,14 @@
 
 ```
 python-dsa/
-├── 01_basics/          # p1–p150   · variables, strings, lists, functions, OOP
-├── 02_oop/             # p151–p200 · inheritance, magic methods, composition
-├── 03_patterns/        # p201–p250 · design patterns, SOLID principles
-├── 04_data_structures/ # p251–p400 · arrays, linked lists, trees, graphs
-├── 05_algorithms/      # p401–p550 · sorting, search, DFS/BFS, dynamic programming
-├── 06_leetcode/        # p551–p900 · LeetCode Easy and Medium problems
-└── 07_backend/         # p901–p1000 · FastAPI, PostgreSQL, Docker, CI/CD
+├── phase_01_basics/          # p1–p50    · variables, strings, lists, loops
+├── phase_02_functions/       # p51–p100  · functions, conditions, comprehensions
+├── phase_03_oop/             # p101–p150 · classes, inheritance, magic methods
+├── phase_04_patterns/        # p151–p250 · design patterns, SOLID principles
+├── phase_05_data_structures/ # p251–p400 · arrays, linked lists, trees, graphs
+├── phase_06_algorithms/      # p401–p550 · sorting, search, DFS/BFS, DP (upcoming)
+├── phase_07_leetcode/        # p551–p900 · LeetCode Easy and Medium (upcoming)
+└── phase_08_backend/         # p901–p1000 · FastAPI, PostgreSQL, Docker (upcoming)
 ```
 
 ---
