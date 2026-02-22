@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=22&duration=3000&pause=1000&color=00FF88&center=true&vCenter=true&width=600&lines=Python+Engineering+Curriculum;p1+→+p1000;Data+Structures+%26+Algorithms;Backend+%7C+FastAPI+%7C+PostgreSQL" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=22&duration=3000&pause=1000&color=00FF88&center=true&vCenter=true&width=600&lines=Python+Engineering+Curriculum;p1+to+p1000;Data+Structures+%26+Algorithms;Backend+%7C+FastAPI+%7C+PostgreSQL" alt="Typing SVG" />
 
 ### 1000-task Python backend curriculum
 **From fundamentals to production-ready backend engineer**
