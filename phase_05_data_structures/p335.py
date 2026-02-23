@@ -23,5 +23,3 @@ def can_finish(numCourses, prerequisites):
         
 print(can_finish(2, [[1,0]]))
 print(can_finish(2, [[1,0], [0,1]]))
-
-    
