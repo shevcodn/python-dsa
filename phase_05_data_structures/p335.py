@@ -20,6 +20,6 @@ def can_finish(numCourses, prerequisites):
     for i in range(numCourses):
         if dfs(i):
             return False
-        
+    return True
 print(can_finish(2, [[1,0]]))
 print(can_finish(2, [[1,0], [0,1]]))
