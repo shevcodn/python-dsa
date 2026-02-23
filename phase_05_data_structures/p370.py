@@ -1,0 +1,28 @@
+import heapq
+from collections import Counter
+
+def reorganize_string(s):
+    count = Counter(s)
+    max_heap = [(-freq, char) for char, freq in count.items()]
+    heapq.heapify(max_heap)
+
+    prev_freq, prev_char = 0, ''
+    result = []
+
+    while max_heap:
+        freq, char = heapq.heappop(max_heap)
+        result.append(char)
+
+        if prev_freq < 0:
+            heapq.heappush(max_heap, (prev_freq, prev_char))
+
+        prev_freq, prev_char = freq + 1, char
+
+    reorganized = ''.join(result)
+    return reorganized if len(reorganized) == len(s) else ''
+
+
+
+print(reorganize_string("aab"))
+print(reorganize_string("aaab"))
+
