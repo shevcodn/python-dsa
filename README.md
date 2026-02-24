@@ -22,9 +22,11 @@
 | 03 OOP | Classes, inheritance, magic methods | p101–p150 | ✅ Done |
 | 04 Patterns | Design patterns, SOLID, architecture | p151–p250 | ✅ Done |
 | 05 Data Structures | Arrays, LinkedList, Trees, Graphs, HashMap | p251–p400 | 🔄 In progress |
-| 06 Algorithms | Sorting, Binary Search, DFS/BFS, DP | p401–p550 | ⏳ Upcoming |
-| 07 LeetCode | Easy + Medium problems | p551–p900 | ⏳ Upcoming |
-| 08 Backend | FastAPI, PostgreSQL, Docker, CI/CD | p901–p1000 | ⏳ Upcoming |
+| 06 Algorithms | Sorting, Binary Search, Two Pointers, DFS/BFS, DP | p401–p550 | ⏳ Upcoming |
+| 07 Advanced Python | Async/await, Testing (pytest), Type hints, Clean code | p551–p650 | ⏳ Upcoming |
+| 08 Databases + Backend | SQL, PostgreSQL, FastAPI, WebSockets, Redis | p651–p800 | ⏳ Upcoming |
+| 09 DevOps + System Design | Docker, CI/CD, GitHub Actions, Microservices | p801–p900 | ⏳ Upcoming |
+| 10 Security + Projects | JWT, OAuth, Cloud deploy, Final Projects | p901–p1000 | ⏳ Upcoming |
 
 ---
 
@@ -32,14 +34,16 @@
 
 ```
 python-dsa/
-├── phase_01_basics/          # p1–p50    · variables, strings, lists, loops
-├── phase_02_functions/       # p51–p100  · functions, conditions, comprehensions
-├── phase_03_oop/             # p101–p150 · classes, inheritance, magic methods
-├── phase_04_patterns/        # p151–p250 · design patterns, SOLID principles
-├── phase_05_data_structures/ # p251–p400 · arrays, linked lists, trees, graphs
-├── phase_06_algorithms/      # p401–p550 · sorting, search, DFS/BFS, DP (upcoming)
-├── phase_07_leetcode/        # p551–p900 · LeetCode Easy and Medium (upcoming)
-└── phase_08_backend/         # p901–p1000 · FastAPI, PostgreSQL, Docker (upcoming)
+├── phase_01_basics/              # p1–p50    · variables, strings, lists, loops
+├── phase_02_functions/           # p51–p100  · functions, conditions, comprehensions
+├── phase_03_oop/                 # p101–p150 · classes, inheritance, magic methods
+├── phase_04_patterns/            # p151–p250 · design patterns, SOLID principles
+├── phase_05_data_structures/     # p251–p400 · arrays, linked lists, trees, graphs, hash maps
+├── phase_06_algorithms/          # p401–p550 · sorting, binary search, DFS/BFS, DP
+├── phase_07_advanced_python/     # p551–p650 · async/await, pytest, type hints, clean code
+├── phase_08_databases_backend/   # p651–p800 · SQL, PostgreSQL, FastAPI, WebSockets, Redis
+├── phase_09_devops/              # p801–p900 · Docker, CI/CD, GitHub Actions, microservices
+└── phase_10_security_projects/   # p901–p1000 · JWT, OAuth, cloud deploy, final projects
 ```
 
 ---
