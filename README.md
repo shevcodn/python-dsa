@@ -12,7 +12,7 @@
 ## Progress
 
 ```
-[████████░░░░░░░░░░░░] 407 / 1000 tasks complete
+[████████░░░░░░░░░░░░] 408 / 1000 tasks complete
 ```
 
 | Phase | Topics | Tasks | Status |
