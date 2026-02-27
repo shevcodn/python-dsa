@@ -12,7 +12,7 @@
 ## Progress
 
 ```
-[████████░░░░░░░░░░░░] 400 / 1000 tasks complete
+[████████░░░░░░░░░░░░] 401 / 1000 tasks complete
 ```
 
 | Phase | Topics | Tasks | Status |
@@ -21,8 +21,8 @@
 | 02 Functions | Functions, conditions, comprehensions | p51–p100 | ✅ Done |
 | 03 OOP | Classes, inheritance, magic methods | p101–p150 | ✅ Done |
 | 04 Patterns | Design patterns, SOLID, architecture | p151–p250 | ✅ Done |
-| 05 Data Structures | Arrays, LinkedList, Trees, Graphs, HashMap | p251–p400 | 🔄 In progress |
-| 06 Algorithms | Sorting, Binary Search, Two Pointers, DFS/BFS, DP | p401–p550 | ⏳ Upcoming |
+| 05 Data Structures | Arrays, LinkedList, Trees, Graphs, HashMap | p251–p400 | ✅ Done |
+| 06 Algorithms | Sorting, Binary Search, Two Pointers, DFS/BFS, DP | p401–p550 | 🔄 In progress |
 | 07 Advanced Python | Async/await, Testing (pytest), Type hints, Clean code | p551–p650 | ⏳ Upcoming |
 | 08 Databases + Backend | SQL, PostgreSQL, FastAPI, WebSockets, Redis | p651–p800 | ⏳ Upcoming |
 | 09 DevOps + System Design | Docker, CI/CD, GitHub Actions, Microservices | p801–p900 | ⏳ Upcoming |
