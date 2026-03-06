@@ -62,7 +62,9 @@ focus      = ["Data Structures", "Algorithms", "System Design"]
 
 <div align="center">
 
-[![Website](https://img.shields.io/badge/shevcodn.dev-00ff88?style=for-the-badge&logo=vercel&logoColor=black)](https://shevcodn.dev)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0d0d0d?style=for-the-badge&logo=linkedin&logoColor=00ff88)](https://linkedin.com/in/shevcodn)
+[![Website](https://img.shields.io/badge/Website-shevcodn.dev-00ff88?style=flat-square&logo=vercel&logoColor=black)](https://shevcodn.dev)
+[![GitLab](https://img.shields.io/badge/GitLab-shevcodn-00ff88?style=flat-square&logo=gitlab&logoColor=black)](https://gitlab.com/shevcodn)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-shevcodn-00ff88?style=flat-square&logo=linkedin&logoColor=black)](https://linkedin.com/in/shevcodn)
+[![LeetCode](https://img.shields.io/badge/LeetCode-shevcodn-00ff88?style=flat-square&logo=leetcode&logoColor=black)](https://leetcode.com/shevcodn)
 
 </div>
