@@ -21,8 +21,12 @@ async def run_wait():
     task2 = asyncio.create_task(fetch_data("Source B", delay=1))
     task3 = asyncio.create_task(fetch_data("Source C", delay=1))
 
-    await asyncio.wait([task1, task2, task3], return_when=asyncio.FIRST_COMPLETED)
+    done, pending = await asyncio.wait([task1, task2, task3], return_when=asyncio.FIRST_COMPLETED)
     print("First completed task:")
+    first = done.pop()
+    print(first.result())
+    for task in pending:
+        task.cancel()
 
 if __name__ == "__main__":
     asyncio.run(run_gather())
