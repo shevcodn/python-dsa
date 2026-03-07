@@ -33,13 +33,8 @@ class StockClient:
             return None
         
     async def get_prices(self, tickers) -> dict:
-        try:
-            response = await self.client.get(f"/v7/finance/quote?symbols={','.join(tickers)}", timeout=5.0)
-            response.raise_for_status()
-            return float(response.json()["quoteResponse"]["result"][0]["regularMarketPrice"])
-        except (httpx.HTTPError, KeyError, IndexError):
-            print(f"Error fetching {ticker}: {e}")
-            return None
+        prices = await asyncio.gather(*[self.get_price(t) for t in tickers])
+        return {t: p for t, p in zip(tickers, prices) if p is not None}
     
     async def add_position(self, ticker, shares, avg_price):
         self.portfolio[ticker] = {"shares": shares, "avg_price": avg_price}
@@ -64,6 +59,8 @@ class StockClient:
     async def check_alerts(self):
         for ticker, alert in self.alerts.items():
             current = await self.get_price(ticker)
+            if current is None:
+                continue
             if alert["above"] is not None and current > alert["above"]:
                 print(f"ALERT: {ticker} ABOVE ${alert['above']} | current: ${current}")
             if alert["below"] is not None and current < alert["below"]:
