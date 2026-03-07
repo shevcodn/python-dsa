@@ -9,8 +9,10 @@ async def create_order(client, order):
 async def main():
     tickers = ["AAPL", "TSLA"]
     async with httpx.AsyncClient() as client:
-        await asyncio.gather(*[create_order(client, {"ticker": t, "quantity": 10, "side": "buy"}) for t in tickers])
-    print("All orders created.")
+        results = await asyncio.gather(*[create_order(client, {"ticker": t, "quantity": 10, "side": "buy"}) for t in tickers])
+    for r in results:
+        print(r)
+
 
 if __name__ == "__main__":
     asyncio.run(main())
