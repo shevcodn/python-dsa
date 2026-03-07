@@ -136,7 +136,7 @@ async def main():
                 if price is None:
                     print(f"{ticker} failed to fetch price")
                 else:
-                    print(f"{ticker}: ${price}")
+                    print(f"{ticker}${price}")
 
 if __name__ == "__main__":
     asyncio.run(main())
