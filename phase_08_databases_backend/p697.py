@@ -1,14 +1,15 @@
+import os
 import asyncio
 import asyncpg
 
 async def main():
     conn1 = await asyncpg.connect(
         host="localhost", port=5432,
-        database="learning", user="denis", password="denis777"
+        database="learning", user="denis", password=os.getenv("DB_PASS", "password")
     )
     conn2 = await asyncpg.connect(
         host="localhost", port=5432,
-        database="learning", user="denis", password="denis777"
+        database="learning", user="denis", password=os.getenv("DB_PASS", "password")
     )
 
     lock1 = await conn1.fetchval("SELECT pg_try_advisory_lock(12345)")

@@ -1,10 +1,11 @@
+import os
 import asyncio
 import asyncpg
 
 async def main():
     conn = await asyncpg.connect(
         host="localhost", port=5432,
-        database="learning", user="denis", password="denis777"
+        database="learning", user="denis", password=os.getenv("DB_PASS", "password")
     )
 
     await conn.execute('CREATE EXTENSION IF NOT EXISTS "uuid-ossp"')

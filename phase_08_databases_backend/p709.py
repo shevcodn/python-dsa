@@ -1,3 +1,4 @@
+import os
 import asyncpg
 from contextlib import asynccontextmanager
 from fastapi import FastAPI, Request, HTTPException, Depends
@@ -7,7 +8,7 @@ from pydantic import BaseModel
 async def lifespan(app: FastAPI):
     app.state.pool = await asyncpg.create_pool(
         host="localhost", port=5432,
-        database="learning", user="denis", password="denis777"
+        database="learning", user="denis", password=os.getenv("DB_PASS", "password")
     )
     async with app.state.pool.acquire() as conn:
         await conn.execute("DROP TABLE IF EXISTS notes")

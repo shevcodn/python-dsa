@@ -1,3 +1,4 @@
+import os
 import asyncio
 import asyncpg
 from pydantic import BaseModel
@@ -30,7 +31,7 @@ class UserRepository:
 async def main():
     conn = await asyncpg.connect(
         host="localhost", port=5432,
-        database="learning", user="denis", password="denis777"
+        database="learning", user="denis", password=os.getenv("DB_PASS", "password")
     )
     try:
         await conn.execute("DROP TABLE IF EXISTS users")

@@ -1,3 +1,4 @@
+import os
 import asyncio
 import asyncpg
 
@@ -8,7 +9,7 @@ async def get_user(pool, user_id):
 async def main():
     pool = await asyncpg.create_pool(
         host="localhost", port=5432,
-        database="learning", user="denis", password="denis777",
+        database="learning", user="denis", password=os.getenv("DB_PASS", "password"),
         min_size=1, max_size=5
     )
     async with pool.acquire() as conn:

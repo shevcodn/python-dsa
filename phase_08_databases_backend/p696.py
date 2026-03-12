@@ -1,14 +1,15 @@
+import os
 import asyncio
 import asyncpg
 
 async def main():
     conn_listener = await asyncpg.connect(
         host="localhost", port=5432,
-        database="learning", user="denis", password="denis777"
+        database="learning", user="denis", password=os.getenv("DB_PASS", "password")
     )
     conn_sender = await asyncpg.connect(
         host="localhost", port=5432,
-        database="learning", user="denis", password="denis777"
+        database="learning", user="denis", password=os.getenv("DB_PASS", "password")
     )
 
     await conn_sender.execute("DROP TABLE IF EXISTS events CASCADE")

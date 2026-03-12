@@ -1,3 +1,4 @@
+import os
 import asyncio
 import asyncpg
 from datetime import datetime
@@ -15,7 +16,7 @@ async def migrate_v3(conn):
 async def main():
     conn = await asyncpg.connect(
         host="localhost", port=5432,
-        database="learning", user="denis", password="denis777"
+        database="learning", user="denis", password=os.getenv("DB_PASS", "password")
     )
     await migrate_v1(conn)
     await conn.execute("INSERT INTO users (id, name) VALUES ($1, $2)", 1, "Denis")

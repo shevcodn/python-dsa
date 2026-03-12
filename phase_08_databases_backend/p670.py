@@ -1,8 +1,9 @@
+import os
 import psycopg2
 
 conn = psycopg2.connect(
     host="localhost", port=5432,
-    database="learning", user="denis", password="denis777"
+    database="learning", user="denis", password=os.getenv("DB_PASS", "password")
 )
 cursor = conn.cursor()
 

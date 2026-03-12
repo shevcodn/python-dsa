@@ -1,3 +1,4 @@
+import os
 import asyncio
 import json
 import redis.asyncio as redis
@@ -11,7 +12,7 @@ redis_client = redis.from_url("redis://localhost:6379/0")
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     await redis_client.ping()
-    conn = await asyncpg.connect(host="localhost", port=5432, database="learning", user="denis", password="denis777")
+    conn = await asyncpg.connect(host="localhost", port=5432, database="learning", user="denis", password=os.getenv("DB_PASS", "password"))
     await conn.execute("DROP TABLE IF EXISTS stocks")
     await conn.execute("CREATE TABLE stocks (symbol TEXT PRIMARY KEY, price REAL NOT NULL, updated_at TIMESTAMP DEFAULT NOW())")
     await conn.execute("INSERT INTO stocks (symbol, price) VALUES ('AAPL', 189.0), ('TSLA', 245.0), ('BTC', 67000.0)")
@@ -25,7 +26,7 @@ async def get_prices():
     cached = await redis_client.get("stocks_cache")
     if cached:
         return json.loads(cached)
-    conn = await asyncpg.connect(host="localhost", port=5432, database="learning", user="denis", password="denis777")
+    conn = await asyncpg.connect(host="localhost", port=5432, database="learning", user="denis", password=os.getenv("DB_PASS", "password"))
     rows = await conn.fetch("SELECT symbol, price FROM stocks")
     await conn.close()
     data = [{"symbol": r["symbol"], "price": r["price"]} for r in rows]
@@ -64,7 +65,7 @@ async def get_stocks():
 
 @app.post("/stocks/update")
 async def update_stock(symbol: str, price: float):
-    conn = await asyncpg.connect(host="localhost", port=5432, database="learning", user="denis", password="denis777")
+    conn = await asyncpg.connect(host="localhost", port=5432, database="learning", user="denis", password=os.getenv("DB_PASS", "password"))
     await conn.execute("UPDATE stocks SET price = $1, updated_at = NOW() WHERE symbol = $2", price, symbol)
     await conn.close()
     await redis_client.delete("stocks_cache")

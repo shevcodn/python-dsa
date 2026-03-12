@@ -1,3 +1,4 @@
+import os
 import asyncio
 import json
 from contextlib import asynccontextmanager
@@ -8,7 +9,7 @@ from asyncpg import create_pool
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     app.state.pool = await create_pool(
-        host="localhost", port=5432, database="learning", user="denis", password="denis777"
+        host="localhost", port=5432, database="learning", user="denis", password=os.getenv("DB_PASS", "password")
     )
     async with app.state.pool.acquire() as conn:
         await conn.execute("DROP TABLE IF EXISTS prices")

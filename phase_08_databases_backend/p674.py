@@ -1,3 +1,4 @@
+import os
 import psycopg2
 from psycopg2 import sql
 from contextlib import contextmanager
@@ -6,7 +7,7 @@ from contextlib import contextmanager
 def get_connection():
     conn = psycopg2.connect(
         host="localhost", port=5432,
-        database="learning", user="denis", password="denis777"
+        database="learning", user="denis", password=os.getenv("DB_PASS", "password")
     )
     try:
         yield conn
